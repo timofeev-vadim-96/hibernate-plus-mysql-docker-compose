@@ -2,12 +2,15 @@ import dao.DaoImpl;
 import model.Course;
 import model.Student;
 import services.Service;
+import utils.JDBC;
 
 import java.sql.Date;
 import java.util.List;
 
 public class Program {
     public static void main(String[] args) {
+        JDBC.initialize();
+
         Service service = new Service(new DaoImpl());
 
         //create

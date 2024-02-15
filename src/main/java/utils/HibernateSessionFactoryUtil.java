@@ -14,7 +14,8 @@ public class HibernateSessionFactoryUtil {
     private HibernateSessionFactoryUtil() {}
 
     /**
-     * Метод создания фабрики сессий
+     * Метод создания фабрики сессий в единственном экземпляре
+     * @return фабрику сессий
      */
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {

@@ -8,7 +8,10 @@ import java.util.List;
 
 public class DaoImpl implements Dao {
     /**
-     * Найти/получить
+     * Метод поиска сущности
+     * @param id идентификатор сущности
+     * @param clazz тип
+     * @return сущность
      */
     @Override
     public <T> T get(int id, Class<T> clazz) {
@@ -18,7 +21,9 @@ public class DaoImpl implements Dao {
     }
 
     /**
-     * Сохранить/добавить
+     * Метод сохранения сущности в БД
+     * @param t сущность
+     * @param <T> ее тип
      */
     @Override
     public <T> void save(T t) {
@@ -30,7 +35,9 @@ public class DaoImpl implements Dao {
     }
 
     /**
-     * Обновить запись
+     * Метод обновления сущности
+     * @param t сущность
+     * @param <T> ее тип
      */
     @Override
     public <T> void update(T t) {
@@ -42,7 +49,9 @@ public class DaoImpl implements Dao {
     }
 
     /**
-     * Удалить
+     * Метод удаления сущности
+     * @param t сущность
+     * @param <T> тип
      */
     @Override
     public <T> void delete(T t) {
@@ -54,7 +63,9 @@ public class DaoImpl implements Dao {
     }
 
     /**
-     * Удалить (перегрузка)
+     * Метод удаления сущности по id
+     * @param clazz тип
+     * @param id идентификатор сущности
      */
     @Override
     public <T> void delete(Class<T> clazz, int id) {
@@ -66,7 +77,9 @@ public class DaoImpl implements Dao {
     }
 
     /**
-     * Найти все элементы одного типа
+     * Метод поиска всех элементов указанного типа
+     * @param clazz тип
+     * @return список элементов указанного типа
      */
     @Override
     public <T> List<T> findAll(Class<T> clazz) {

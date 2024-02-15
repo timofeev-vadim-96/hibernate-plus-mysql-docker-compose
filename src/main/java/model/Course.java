@@ -33,16 +33,28 @@ public class Course {
         this.duration = duration;
     }
 
+    /**
+     * Метод добавления студента
+     * @param student новый студент
+     */
     public void addStudent(Student student) {
         students.add(student);
     }
 
+    /**
+     * Метод удаления студента
+     * @param id идентификатор студента
+     */
     public void removeStudent(int id) {
         Student student = students.stream().filter(st -> st.getId() == id).findFirst()
                 .orElseThrow(() -> new NoSuchElementException("Студент с указанным id не найден"));
         students.remove(student);
     }
 
+    /**
+     * Метод удаления студента
+     * @param student студент
+     */
     public void removeStudent(Student student) {
         students.remove(student);
     }

@@ -38,14 +38,16 @@ public class Student {
     }
 
     /**
-     * Добавить новый курс
+     * Метод добавления нового курса студенту
+     * @param course новый курс
      */
     public void addCourse(Course course) {
         courses.add(course);
     }
 
     /**
-     * Удалить курс
+     * Метод удаления курса из списка курсов студента
+     * @param id идентификатор курса в БД
      */
     public void removeCourse(int id) {
         Course course = courses.stream().filter(st -> st.getId() == id).findFirst()
@@ -54,7 +56,8 @@ public class Student {
     }
 
     /**
-     * Удалить курс (перегрузка)
+     * Метод удаления курса из списка курсов студента
+     * @param course объект курса
      */
     public void removeCourse(Course course) {
         courses.remove(course);
